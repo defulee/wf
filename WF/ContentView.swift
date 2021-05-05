@@ -1,0 +1,83 @@
+//
+//  ContentView.swift
+//  Workflow
+//
+//  Created by defu.li on 2021/4/21.
+//
+
+import SwiftUI
+
+extension NSTextField {
+    open override var focusRingType: NSFocusRingType {
+            get { .none }
+            set { }
+    }
+}
+
+struct ContentView: View {
+    @State var input: String = ""
+    @State var text: String = ""
+
+    var body: some View {
+    
+        
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20.0, height: 20.0)
+            
+                TextField("Search", text: $input)
+                    .font(.title)
+                    .textFieldStyle(PlainTextFieldStyle())
+//                    .padding([.leading, .trailing], 4)
+//                    .cornerRadius(6)
+//                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray))
+//                    .padding([.leading, .trailing], 24)
+                
+                Button("submit", action: {
+                    print("submit btn action...")
+                    let bash = Bash()
+                    let files = try? bash.run(commandName: "ls", arguments: ["-la", "~/Desktop"])
+                    print(files)
+                    
+                    if let lsOutput = try? bash.run(commandName: "ls", arguments: []) { print(lsOutput) }
+                    if let output = try? bash.run(commandName: "ls", arguments: ["-la"]) { print(output)}
+                    
+                    // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
+                    // let file = FileHelper()
+                    // file.write(fileName: "test", data: "submit btn action...")
+                }).frame(height: 40.0)
+            }
+            .frame(height: 30)
+//            .padding(.vertical, 10)
+//            .overlay(Rectangle().frame(height: 30)
+////                        .padding(.top, 35)
+//            )
+//            .overlay(RoundedRectangle(cornerRadius: 10)
+//                        .stroke(Color.gray)
+//            )
+
+//            .foregroundColor(.gray)
+//            .background(Color.gray)
+//            .padding(10)
+          
+            Divider()
+            
+            MultiTextEditorView()
+            
+            Divider()
+
+            ScriptJobView(job: ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al"))
+
+        }.padding().background(Color.white)
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
