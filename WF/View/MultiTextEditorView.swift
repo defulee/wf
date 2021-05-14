@@ -54,20 +54,20 @@ struct MultiTextEditorView: View {
         }
         .padding()
         .background(Color.white)
-        .toolbar(content: {
-            ToolbarItem {
-                Menu {
-                    Picker("Column", selection: $filter) {
-                        ForEach(FilterColumn.allCases) { column in
-                            Text(column.rawValue).tag(column)
-                        }
-                    }
-                    .pickerStyle(InlinePickerStyle())
-                } label: {                    
-                    Label("Filter", systemImage: "rectangle.split.3x1")
-                }
-            }
-        })
+//        .toolbar(content: {
+//            ToolbarItem {
+//                Menu {
+//                    Picker("Column", selection: $filter) {
+//                        ForEach(FilterColumn.allCases) { column in
+//                            Text(column.rawValue).tag(column)
+//                        }
+//                    }
+//                    .pickerStyle(InlinePickerStyle())
+//                } label: {                    
+//                    Label("Filter", systemImage: "rectangle.split.3x1")
+//                }
+//            }
+//        })
     }
 }
 

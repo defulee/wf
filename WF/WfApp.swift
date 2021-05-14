@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TruckApp: App {
+struct WfApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

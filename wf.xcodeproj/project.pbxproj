@@ -11,6 +11,7 @@
 		9D0C30E2263060F500DCE2D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C30E1263060F500DCE2D0 /* ContentView.swift */; };
 		9D0C30E4263060FA00DCE2D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0C30E3263060FA00DCE2D0 /* Assets.xcassets */; };
 		9D0C30E7263060FA00DCE2D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0C30E6263060FA00DCE2D0 /* Preview Assets.xcassets */; };
+		9D24C0D4264E642800E87076 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24C0D3264E642800E87076 /* FlowView.swift */; };
 		9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */; };
 		9D829E1F2636F93800769EF2 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E1E2636F93800769EF2 /* Bash.swift */; };
 		9D829E232638668600769EF2 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E222638668600769EF2 /* Script.swift */; };
@@ -32,6 +33,7 @@
 		9D0C30E6263060FA00DCE2D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D0C30E8263060FA00DCE2D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D0C30E9263060FA00DCE2D0 /* Wf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wf.entitlements; sourceTree = "<group>"; };
+		9D24C0D3264E642800E87076 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
 		9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextEditorView.swift; sourceTree = "<group>"; };
 		9D829E1E2636F93800769EF2 /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
 		9D829E222638668600769EF2 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
@@ -97,9 +99,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9D24C0D2264E640700E87076 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				9D24C0D3264E642800E87076 /* FlowView.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		9D77C05A26344DDF00FC31BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D24C0D2264E640700E87076 /* Flow */,
 				9D829E3C2641573400769EF2 /* Job */,
 				9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */,
 			);
@@ -246,6 +257,7 @@
 				9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */,
 				9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
+				9D24C0D4264E642800E87076 /* FlowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

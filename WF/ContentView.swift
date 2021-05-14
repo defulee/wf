@@ -31,10 +31,6 @@ struct ContentView: View {
                 TextField("Search", text: $input)
                     .font(.title)
                     .textFieldStyle(PlainTextFieldStyle())
-//                    .padding([.leading, .trailing], 4)
-//                    .cornerRadius(6)
-//                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray))
-//                    .padding([.leading, .trailing], 24)
                 
                 Button("submit", action: {
                     print("submit btn action...")
@@ -51,17 +47,6 @@ struct ContentView: View {
                 }).frame(height: 40.0)
             }
             .frame(height: 30)
-//            .padding(.vertical, 10)
-//            .overlay(Rectangle().frame(height: 30)
-////                        .padding(.top, 35)
-//            )
-//            .overlay(RoundedRectangle(cornerRadius: 10)
-//                        .stroke(Color.gray)
-//            )
-
-//            .foregroundColor(.gray)
-//            .background(Color.gray)
-//            .padding(10)
           
             Divider()
             
@@ -69,10 +54,44 @@ struct ContentView: View {
             
             Divider()
 
-            ScriptJobView(job: ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al"))
+            FlowView()
 
-        }.padding().background(Color.white)
+        }.padding()
+        .background(Color.white)
+        .toolbar(content: {
+            HStack(alignment: .center) {
+                Image(systemName: "magnifyingglass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20.0, height: 20.0)
+            
+                VStack {
+                    TextField("Search", text: $input)
+                        .font(.title)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(width: 680)
+                    
+                    Divider()
+                        .frame(width: 680)
+                }
+                
+//                Button("submit", action: {
+//                    print("submit btn action...")
+//                })
+//                .frame(height: 40.0)
+                Image(systemName: "terminal.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 30.0)
+                    .onTapGesture(count: 1, perform: {
+                        print("submit btn onTapGesture...")
+                    })
+            }
+            .frame(height: 30)
+             
+        })
     }
+  
 }
 
 
