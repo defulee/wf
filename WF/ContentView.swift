@@ -75,17 +75,16 @@ struct ContentView: View {
                         .frame(width: 680)
                 }
                 
-//                Button("submit", action: {
-//                    print("submit btn action...")
-//                })
-//                .frame(height: 40.0)
-                Image(systemName: "terminal.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 30.0)
-                    .onTapGesture(count: 1, perform: {
-                        print("submit btn onTapGesture...")
-                    })
+                Button(action: {
+                    print("submit btn action...")
+                })  {
+                    Image(systemName: "paperplane.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .rotationEffect(Angle(degrees: 45))
+                        .frame(height: 30.0)
+                }
             }
             .frame(height: 30)
              

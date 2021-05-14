@@ -23,6 +23,8 @@
 		9D829E502642DA4A00769EF2 /* PListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D829E4F2642DA4A00769EF2 /* PListKit */; };
 		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
 		9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* ScriptJob.swift */; };
+		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
+		9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowJob.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		9D829E4A2642A65C00769EF2 /* ScriptInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInput.swift; sourceTree = "<group>"; };
 		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9D829E572642E64C00769EF2 /* ScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJob.swift; sourceTree = "<group>"; };
+		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		9D829E67264ED1A100769EF2 /* FlowJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowJob.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			children = (
 				9D829E542642E60E00769EF2 /* ModelData.swift */,
 				9D829E572642E64C00769EF2 /* ScriptJob.swift */,
+				9D829E64264ED14E00769EF2 /* Flow.swift */,
+				9D829E67264ED1A100769EF2 /* FlowJob.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,9 +258,11 @@
 				9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */,
 				9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */,
 				9D0C30E2263060F500DCE2D0 /* ContentView.swift in Sources */,
+				9D829E65264ED14E00769EF2 /* Flow.swift in Sources */,
 				9D829E552642E60E00769EF2 /* ModelData.swift in Sources */,
 				9D829E232638668600769EF2 /* Script.swift in Sources */,
 				9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */,
+				9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */,
 				9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
 				9D24C0D4264E642800E87076 /* FlowView.swift in Sources */,

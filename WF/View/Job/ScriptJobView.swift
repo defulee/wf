@@ -9,10 +9,6 @@ import SwiftUI
 
 
 struct ScriptJobView: View {
-//    @State var interpreter: ScriptInterpreter = .zsh
-//    @State var input: ScriptInput = .query
-//    @State var jobId: String = "test job"
-//    @State var script: String = "hello shell"
     @State var isEditorPresented = false
     @State var job: ScriptJob
         

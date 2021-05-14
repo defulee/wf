@@ -18,13 +18,6 @@ struct FlowView: View {
             ScriptJobView(job: ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al"))
                 .position(x: 0.0, y: 0.0)
         })
-//        {
-//            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//
-//            ScriptJobView(job: ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al"))
-//
-//            ScriptJobView(job: ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al"))
-//        }
         .frame(width: 800, height: 600)
     }
 }
