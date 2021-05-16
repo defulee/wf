@@ -5,9 +5,9 @@
         "package": "PListKit",
         "repositoryURL": "https://github.com/orchetect/PListKit",
         "state": {
-          "branch": "master",
-          "revision": "fc7cef1003cd69618ac08a9e60f08968f90927c7",
-          "version": null
+          "branch": null,
+          "revision": "19c045cb1a124ec0850384d7ead9c011d25d9eb2",
+          "version": "1.0.1"
         }
       }
     ]

@@ -20,11 +20,15 @@
 		9D829E4326416AB300769EF2 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4226416AB300769EF2 /* ScriptEditorView.swift */; };
 		9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */; };
 		9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4A2642A65C00769EF2 /* ScriptInput.swift */; };
-		9D829E502642DA4A00769EF2 /* PListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D829E4F2642DA4A00769EF2 /* PListKit */; };
 		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
 		9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* ScriptJob.swift */; };
 		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
-		9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowJob.swift */; };
+		9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */; };
+		9D829E6B26500A0700769EF2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E6A26500A0700769EF2 /* Job.swift */; };
+		9D829E752651019C00769EF2 /* PListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D829E742651019C00769EF2 /* PListKit */; };
+		9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7726510B8D00769EF2 /* FlowConnection.swift */; };
+		9D829E7B2651131400769EF2 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7A2651131400769EF2 /* JobType.swift */; };
+		9D829E8026515E4600769EF2 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7F26515E4600769EF2 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +51,11 @@
 		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9D829E572642E64C00769EF2 /* ScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJob.swift; sourceTree = "<group>"; };
 		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		9D829E67264ED1A100769EF2 /* FlowJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowJob.swift; sourceTree = "<group>"; };
+		9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScriptJob.swift; sourceTree = "<group>"; };
+		9D829E6A26500A0700769EF2 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		9D829E7726510B8D00769EF2 /* FlowConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConnection.swift; sourceTree = "<group>"; };
+		9D829E7A2651131400769EF2 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
+		9D829E7F26515E4600769EF2 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D829E502642DA4A00769EF2 /* PListKit in Frameworks */,
+				9D829E752651019C00769EF2 /* PListKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,9 @@
 		9D0C30DE263060F500DCE2D0 /* WF */ = {
 			isa = PBXGroup;
 			children = (
+				9D829E7E26515E2700769EF2 /* Extension */,
+				9D829E7026509C5100769EF2 /* Flow */,
+				9D829E6D26509C0B00769EF2 /* Job */,
 				9D829E522642E59700769EF2 /* Model */,
 				9D829E4526428B2100769EF2 /* Enums */,
 				9D829E182636F70A00769EF2 /* Util */,
@@ -161,6 +172,7 @@
 			children = (
 				9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */,
 				9D829E4A2642A65C00769EF2 /* ScriptInput.swift */,
+				9D829E7A2651131400769EF2 /* JobType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -169,11 +181,59 @@
 			isa = PBXGroup;
 			children = (
 				9D829E542642E60E00769EF2 /* ModelData.swift */,
-				9D829E572642E64C00769EF2 /* ScriptJob.swift */,
-				9D829E64264ED14E00769EF2 /* Flow.swift */,
-				9D829E67264ED1A100769EF2 /* FlowJob.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D829E6D26509C0B00769EF2 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				9D829E7126509C6B00769EF2 /* Common */,
+				9D829E6F26509C2400769EF2 /* Custom */,
+				9D829E6E26509C1500769EF2 /* BuiltIn */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		9D829E6E26509C1500769EF2 /* BuiltIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BuiltIn;
+			sourceTree = "<group>";
+		};
+		9D829E6F26509C2400769EF2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9D829E572642E64C00769EF2 /* ScriptJob.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9D829E7026509C5100769EF2 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				9D829E64264ED14E00769EF2 /* Flow.swift */,
+				9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */,
+				9D829E7726510B8D00769EF2 /* FlowConnection.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		9D829E7126509C6B00769EF2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9D829E6A26500A0700769EF2 /* Job.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9D829E7E26515E2700769EF2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9D829E7F26515E4600769EF2 /* extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +253,7 @@
 			);
 			name = wf;
 			packageProductDependencies = (
-				9D829E4F2642DA4A00769EF2 /* PListKit */,
+				9D829E742651019C00769EF2 /* PListKit */,
 			);
 			productName = Workflow;
 			productReference = 9D0C30DC263060F500DCE2D0 /* wf.app */;
@@ -223,7 +283,7 @@
 			);
 			mainGroup = 9D0C30D3263060F400DCE2D0;
 			packageReferences = (
-				9D829E4E2642DA4A00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */,
+				9D829E732651019C00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */,
 			);
 			productRefGroup = 9D0C30DD263060F500DCE2D0 /* Products */;
 			projectDirPath = "";
@@ -258,14 +318,18 @@
 				9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */,
 				9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */,
 				9D0C30E2263060F500DCE2D0 /* ContentView.swift in Sources */,
+				9D829E7B2651131400769EF2 /* JobType.swift in Sources */,
 				9D829E65264ED14E00769EF2 /* Flow.swift in Sources */,
 				9D829E552642E60E00769EF2 /* ModelData.swift in Sources */,
 				9D829E232638668600769EF2 /* Script.swift in Sources */,
+				9D829E8026515E4600769EF2 /* extension.swift in Sources */,
 				9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */,
-				9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */,
+				9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */,
+				9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */,
 				9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
 				9D24C0D4264E642800E87076 /* FlowView.swift in Sources */,
+				9D829E6B26500A0700769EF2 /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,20 +519,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D829E4E2642DA4A00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */ = {
+		9D829E732651019C00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/orchetect/PListKit";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D829E4F2642DA4A00769EF2 /* PListKit */ = {
+		9D829E742651019C00769EF2 /* PListKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D829E4E2642DA4A00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */;
+			package = 9D829E732651019C00769EF2 /* XCRemoteSwiftPackageReference "PListKit" */;
 			productName = PListKit;
 		};
 /* End XCSwiftPackageProductDependency section */

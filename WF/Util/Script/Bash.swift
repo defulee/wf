@@ -23,6 +23,18 @@ class Bash: Script {
 
     // example：
     //  let files = bash.run(commandName: "ls", arguments: ["-la", "~/Desktop"])
+    /**
+     let bash = Bash()
+     let files = try? bash.run(commandName: "ls", arguments: ["-la", "~/Desktop"])
+     print(files)
+     
+     if let lsOutput = try? bash.run(commandName: "ls", arguments: []) { print(lsOutput) }
+     if let output = try? bash.run(commandName: "ls", arguments: ["-la"]) { print(output)}
+     
+     // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
+     // let file = FileHelper()
+     // file.write(fileName: "test", data: "submit btn action...")
+     */
     private func run(_ command: String, with arguments: [String] = []) throws -> String {
         let process = Process()
         process.launchPath = command

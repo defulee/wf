@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-extension NSTextField {
-    open override var focusRingType: NSFocusRingType {
-            get { .none }
-            set { }
-    }
-}
+
 
 struct ContentView: View {
     @State var input: String = ""
@@ -22,42 +17,17 @@ struct ContentView: View {
     
         
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20.0, height: 20.0)
-            
-                TextField("Search", text: $input)
-                    .font(.title)
-                    .textFieldStyle(PlainTextFieldStyle())
-                
-                Button("submit", action: {
-                    print("submit btn action...")
-                    let bash = Bash()
-                    let files = try? bash.run(commandName: "ls", arguments: ["-la", "~/Desktop"])
-                    print(files)
-                    
-                    if let lsOutput = try? bash.run(commandName: "ls", arguments: []) { print(lsOutput) }
-                    if let output = try? bash.run(commandName: "ls", arguments: ["-la"]) { print(output)}
-                    
-                    // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
-                    // let file = FileHelper()
-                    // file.write(fileName: "test", data: "submit btn action...")
-                }).frame(height: 40.0)
-            }
-            .frame(height: 30)
-          
-            Divider()
-            
-            MultiTextEditorView()
-            
-            Divider()
+           
+//            MultiTextEditorView()
+//
+//            Divider()
 
             FlowView()
+                .background(Color(hex: 0x333333))
 
         }.padding()
         .background(Color.white)
+        .frame(minWidth: 950)
         .toolbar(content: {
             HStack(alignment: .center) {
                 Image(systemName: "magnifyingglass")
@@ -78,12 +48,21 @@ struct ContentView: View {
                 Button(action: {
                     print("submit btn action...")
                 })  {
-                    Image(systemName: "paperplane.fill")
+                    Image(systemName: "hand.point.up")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .rotationEffect(Angle(degrees: 45))
+                        .rotationEffect(Angle(degrees: 90))
                         .frame(height: 30.0)
+                }
+                
+                Divider()
+                
+                Button(action: {
+                    print("job list btn action...")
+                })  {
+                    Image(systemName: "rectangle.3.offgrid")
+                        .frame(height: 20.0)
                 }
             }
             .frame(height: 30)
