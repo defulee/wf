@@ -18,7 +18,7 @@ class ScriptJob: Job {
         self.input = input
         self.script = script
         
-        super.init(id: id, type: .ScriptJob, desc: "Script Job")
+        super.init(id: id, type: .ScriptJob, desc: "Run Script")
     }
     
     override func exec() -> String {
