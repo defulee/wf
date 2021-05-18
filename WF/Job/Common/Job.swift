@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Job {
+class Job: Encodable {
     var id: String
     var type: JobType
     var desc: String

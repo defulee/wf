@@ -47,6 +47,18 @@ struct ContentView: View {
                 
                 Button(action: {
                     print("submit btn action...")
+                    
+                    // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
+//                     let file = FileHelper()
+//                     file.write(fileName: "test", data: "submit btn action...")
+                    do {
+                        let encode = JSONEncoder()
+                        let job1 = RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296")
+                        let encodeVal = try encode.encode(job1)
+                        print("\(encodeVal)")
+                    } catch {
+                        fatalError("Couldn't encode job as string:\n\(error)")
+                    }
                 })  {
                     Image(systemName: "hand.point.up")
                         .renderingMode(.original)

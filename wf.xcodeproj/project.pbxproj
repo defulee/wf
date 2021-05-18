@@ -21,7 +21,7 @@
 		9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */; };
 		9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4A2642A65C00769EF2 /* ScriptInput.swift */; };
 		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
-		9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* ScriptJob.swift */; };
+		9D829E582642E64C00769EF2 /* RunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* RunScript.swift */; };
 		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
 		9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */; };
 		9D829E6B26500A0700769EF2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E6A26500A0700769EF2 /* Job.swift */; };
@@ -29,8 +29,8 @@
 		9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7726510B8D00769EF2 /* FlowConnection.swift */; };
 		9D829E7B2651131400769EF2 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7A2651131400769EF2 /* JobType.swift */; };
 		9D829E8026515E4600769EF2 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7F26515E4600769EF2 /* extension.swift */; };
-		9D829E832652A1A800769EF2 /* PostNotificationJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E822652A1A800769EF2 /* PostNotificationJob.swift */; };
-		9D829E862652A1D400769EF2 /* CopyToClipboardJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E852652A1D400769EF2 /* CopyToClipboardJob.swift */; };
+		9D829E832652A1A800769EF2 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E822652A1A800769EF2 /* PostNotification.swift */; };
+		9D829E862652A1D400769EF2 /* CopyToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E852652A1D400769EF2 /* CopyToClipboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,15 +51,15 @@
 		9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInterpreter.swift; sourceTree = "<group>"; };
 		9D829E4A2642A65C00769EF2 /* ScriptInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInput.swift; sourceTree = "<group>"; };
 		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		9D829E572642E64C00769EF2 /* ScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJob.swift; sourceTree = "<group>"; };
+		9D829E572642E64C00769EF2 /* RunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScript.swift; sourceTree = "<group>"; };
 		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScriptJob.swift; sourceTree = "<group>"; };
 		9D829E6A26500A0700769EF2 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		9D829E7726510B8D00769EF2 /* FlowConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConnection.swift; sourceTree = "<group>"; };
 		9D829E7A2651131400769EF2 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
 		9D829E7F26515E4600769EF2 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
-		9D829E822652A1A800769EF2 /* PostNotificationJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotificationJob.swift; sourceTree = "<group>"; };
-		9D829E852652A1D400769EF2 /* CopyToClipboardJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardJob.swift; sourceTree = "<group>"; };
+		9D829E822652A1A800769EF2 /* PostNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotification.swift; sourceTree = "<group>"; };
+		9D829E852652A1D400769EF2 /* CopyToClipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +202,8 @@
 		9D829E6E26509C1500769EF2 /* Outputs */ = {
 			isa = PBXGroup;
 			children = (
-				9D829E822652A1A800769EF2 /* PostNotificationJob.swift */,
-				9D829E852652A1D400769EF2 /* CopyToClipboardJob.swift */,
+				9D829E822652A1A800769EF2 /* PostNotification.swift */,
+				9D829E852652A1D400769EF2 /* CopyToClipboard.swift */,
 			);
 			path = Outputs;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 		9D829E6F26509C2400769EF2 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				9D829E572642E64C00769EF2 /* ScriptJob.swift */,
+				9D829E572642E64C00769EF2 /* RunScript.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -327,14 +327,14 @@
 				9D829E7B2651131400769EF2 /* JobType.swift in Sources */,
 				9D829E65264ED14E00769EF2 /* Flow.swift in Sources */,
 				9D829E552642E60E00769EF2 /* ModelData.swift in Sources */,
-				9D829E832652A1A800769EF2 /* PostNotificationJob.swift in Sources */,
+				9D829E832652A1A800769EF2 /* PostNotification.swift in Sources */,
 				9D829E232638668600769EF2 /* Script.swift in Sources */,
 				9D829E8026515E4600769EF2 /* extension.swift in Sources */,
 				9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */,
-				9D829E862652A1D400769EF2 /* CopyToClipboardJob.swift in Sources */,
+				9D829E862652A1D400769EF2 /* CopyToClipboard.swift in Sources */,
 				9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */,
 				9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */,
-				9D829E582642E64C00769EF2 /* ScriptJob.swift in Sources */,
+				9D829E582642E64C00769EF2 /* RunScript.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
 				9D24C0D4264E642800E87076 /* FlowView.swift in Sources */,
 				9D829E6B26500A0700769EF2 /* Job.swift in Sources */,

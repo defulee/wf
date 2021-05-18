@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class CopyToClipboardJob: Job {
+class CopyToClipboard: Job {
     
     override func exec() -> String {
         print("job run...")

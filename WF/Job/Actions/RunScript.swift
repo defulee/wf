@@ -8,7 +8,7 @@
 import Foundation
 
 
-class ScriptJob: Job {
+class RunScript: Job {
     var interpreter: ScriptInterpreter
     var input: ScriptInput
     var script: String
@@ -18,7 +18,7 @@ class ScriptJob: Job {
         self.input = input
         self.script = script
         
-        super.init(id: id, type: .ScriptJob, desc: "Run Script")
+        super.init(id: id, type: .RunScript, desc: "Run Script")
     }
     
     override func exec() -> String {

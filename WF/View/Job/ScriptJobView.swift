@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ScriptJobView: View {
     @State var isEditorPresented = false
-    @State var job: ScriptJob
+    @State var job: RunScript
         
     var body: some View {
         ZStack {
@@ -47,7 +47,7 @@ struct ScriptJobView: View {
 }
 
 struct ScriptJobView_Previews: PreviewProvider {
-    static var job: ScriptJob = ScriptJob(id: "test")
+    static var job: RunScript = RunScript(id: "test")
     
     static var previews: some View {
         ScriptJobView(job: job)

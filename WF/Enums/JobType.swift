@@ -8,8 +8,9 @@
 import Foundation
 
 enum JobType: String, CaseIterable, Identifiable, Codable {
-    case ScriptJob = "ScriptJob"
-    case BuiltInJob = "BuiltInJob"
+    case RunScript = "action.script"
+    case PostNotification = "output.notification"
+    case CopyToClipboard = "output.clipboard"
 
     var id: JobType { self }
 }

@@ -14,7 +14,7 @@ final class ModelData: ObservableObject {
 
     @Published var builtInJobs = [Job]()
     
-    @Published var scriptJobs: [ScriptJob] = loadScriptJobs()
+    @Published var scriptJobs: [RunScript] = loadScriptJobs()
 
     var builtInJobsDict: [String: [Job]] {
         Dictionary(
@@ -23,7 +23,7 @@ final class ModelData: ObservableObject {
         )
     }
     
-    var scriptJobDict: [String: [ScriptJob]] {
+    var scriptJobDict: [String: [RunScript]] {
         Dictionary(
             grouping: scriptJobs,
             by: { $0.id}
@@ -34,16 +34,16 @@ final class ModelData: ObservableObject {
 
 
 func loadFlows() -> [Flow]{
-    let job1 = FlowScriptJob(job: ScriptJob(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296"), xpos: 160, ypos: 60)
-    let job2 = FlowScriptJob(job: ScriptJob(id:  "200D6FF7-2B7F-42FF-8B27-331B37ABC36C"), xpos: 560, ypos: 60)
-    let job3 = FlowScriptJob(job: ScriptJob(id: "6D2F020C-4B37-4402-AE34-3C7CA86B08DB"), xpos: 760, ypos: 60)
+    let job1 = FlowScriptJob(job: RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296"), xpos: 160, ypos: 60)
+    let job2 = FlowScriptJob(job: RunScript(id:  "200D6FF7-2B7F-42FF-8B27-331B37ABC36C"), xpos: 560, ypos: 60)
+    let job3 = FlowScriptJob(job: RunScript(id: "6D2F020C-4B37-4402-AE34-3C7CA86B08DB"), xpos: 760, ypos: 60)
     
-    let job4 = FlowScriptJob(job: ScriptJob(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A"), xpos: 360, ypos: 180)
-    let job5 = FlowScriptJob(job: ScriptJob(id: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65"), xpos: 560, ypos: 180)
-    let job6 = FlowScriptJob(job: ScriptJob(id: "ED513634-4FBC-4258-AF29-9F6214C05D28"), xpos: 760, ypos: 180)
+    let job4 = FlowScriptJob(job: RunScript(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A"), xpos: 360, ypos: 180)
+    let job5 = FlowScriptJob(job: RunScript(id: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65"), xpos: 560, ypos: 180)
+    let job6 = FlowScriptJob(job: RunScript(id: "ED513634-4FBC-4258-AF29-9F6214C05D28"), xpos: 760, ypos: 180)
     
-    let job7 = FlowScriptJob(job: ScriptJob(id: "506F8893-E009-4F0F-92F3-4656785B9875"), xpos: 560, ypos: 300)
-    let job8 = FlowScriptJob(job: ScriptJob(id: "EF04F569-D9CF-4145-ACE0-4BD0B3DEF672"), xpos: 760, ypos: 300)
+    let job7 = FlowScriptJob(job: RunScript(id: "506F8893-E009-4F0F-92F3-4656785B9875"), xpos: 560, ypos: 300)
+    let job8 = FlowScriptJob(job: RunScript(id: "EF04F569-D9CF-4145-ACE0-4BD0B3DEF672"), xpos: 760, ypos: 300)
     
     
     let flow = Flow(scriptJobs: [job1, job2, job3, job4, job5, job6, job7, job8],
@@ -63,17 +63,17 @@ func loadFlows() -> [Flow]{
 }
 
 
-func loadScriptJobs() -> [ScriptJob]{
-    let job1 = ScriptJob(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296")
-    let job2 = ScriptJob(id:  "200D6FF7-2B7F-42FF-8B27-331B37ABC36C")
-    let job3 = ScriptJob(id: "6D2F020C-4B37-4402-AE34-3C7CA86B08DB")
+func loadScriptJobs() -> [RunScript]{
+    let job1 = RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296")
+    let job2 = RunScript(id:  "200D6FF7-2B7F-42FF-8B27-331B37ABC36C")
+    let job3 = RunScript(id: "6D2F020C-4B37-4402-AE34-3C7CA86B08DB")
     
-    let job4 = ScriptJob(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A")
-    let job5 = ScriptJob(id: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65")
-    let job6 = ScriptJob(id: "ED513634-4FBC-4258-AF29-9F6214C05D28")
+    let job4 = RunScript(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A")
+    let job5 = RunScript(id: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65")
+    let job6 = RunScript(id: "ED513634-4FBC-4258-AF29-9F6214C05D28")
     
-    let job7 = ScriptJob(id: "506F8893-E009-4F0F-92F3-4656785B9875")
-    let job8 = ScriptJob(id: "EF04F569-D9CF-4145-ACE0-4BD0B3DEF672")
+    let job7 = RunScript(id: "506F8893-E009-4F0F-92F3-4656785B9875")
+    let job8 = RunScript(id: "EF04F569-D9CF-4145-ACE0-4BD0B3DEF672")
     
     
     return [job1, job2, job3, job4, job5, job6, job7, job8]

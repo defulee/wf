@@ -9,7 +9,7 @@ import SwiftUI
 import PListKit
 
 struct ScriptEditorView: View {
-    @Binding var job: ScriptJob
+    @Binding var job: RunScript
 
     var submit: () -> Void
 
@@ -33,7 +33,7 @@ struct ScriptEditorView: View {
                     
                     Group {
                         Text("Description: ")
-                        TextField("Script Description", text: $job.id)
+                        TextField("Script Description", text: $job.desc)
                     }
                 }
             }
@@ -94,7 +94,7 @@ struct ScriptEditorView: View {
 
 struct ScriptEditorView_Previews: PreviewProvider {
     
-    @State static var job: ScriptJob = ScriptJob(id: "test", interpreter: .bash, input: .query, script: "ls -al")
+    @State static var job: RunScript = RunScript(id: "test", interpreter: .bash, input: .query, script: "ls -al")
     
     static var previews: some View {
         ScriptEditorView(job: $job, submit: {
