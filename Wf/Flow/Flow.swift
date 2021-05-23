@@ -11,18 +11,18 @@ import Foundation
 
 class Flow : Identifiable {
     var id: String
-    var scriptJobs: [FlowScriptJob]
+    var jobs: [FlowJob]
     var connections: [FlowConnection]
     
-    init(scriptJobs: [FlowScriptJob], connections: [FlowConnection]) {
+    init(jobs: [FlowJob], connections: [FlowConnection]) {
         self.id = "flow"
-        self.scriptJobs = scriptJobs
+        self.jobs = jobs
         self.connections = connections
     }
     
     func srcPos(connection : FlowConnection) -> CGPoint {
-        for flowJob in self.scriptJobs {
-            if (flowJob.job.id == connection.srcJobId) {
+        for flowJob in self.jobs {
+            if (flowJob.id == connection.srcJobId) {
                 return CGPoint(x: flowJob.xpos + 60, y: flowJob.ypos)
             }
         }
@@ -34,8 +34,8 @@ class Flow : Identifiable {
         let srcPos = self.srcPos(connection: connection)
         var cnts = [Connection]()
         for destJobId in connection.destJobIds {
-            for flowJob in self.scriptJobs {
-                if (flowJob.job.id == destJobId) {
+            for flowJob in self.jobs {
+                if (flowJob.id == destJobId) {
                     cnts.append(Connection(srcPos: CGPoint(x: srcPos.x, y: srcPos.y),
                                            destPos: CGPoint(x: flowJob.xpos - 60, y: flowJob.ypos)))
                 }

@@ -12,6 +12,8 @@ import SwiftUI
 struct ContentView: View {
     @State var input: String = ""
     @State var text: String = ""
+    @State var showAlert: Bool = false
+    @State var filePath: String = ""
 
     var body: some View {
     
@@ -50,15 +52,17 @@ struct ContentView: View {
                     
                     // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
 //                     let file = FileHelper()
-//                     file.write(fileName: "test", data: "submit btn action...")
-                    do {
-                        let encode = JSONEncoder()
-                        let job1 = RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296")
-                        let encodeVal = try encode.encode(job1)
-                        print("\(encodeVal)")
-                    } catch {
-                        fatalError("Couldn't encode job as string:\n\(error)")
-                    }
+//                    self.filePath = file.write(fileName: "test", data: "submit btn action...")
+//                    print("\(self.filePath)")
+                    
+                    let path:String = NSTemporaryDirectory() + "Documents/hangge.txt"
+//                    let info = "欢迎来到hange.com"
+//                    try! info.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+                    print(path)
+                    self.filePath = path
+                    self.showAlert.toggle()
+                    
+                
                 })  {
                     Image(systemName: "hand.point.up")
                         .renderingMode(.original)
@@ -66,6 +70,10 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fill)
                         .rotationEffect(Angle(degrees: 90))
                         .frame(height: 30.0)
+                }.alert(isPresented: $showAlert) {
+                    Alert(title: Text("Important message"),
+                          message: Text(self.filePath),
+                          dismissButton: .default(Text("Got it!")))
                 }
                 
                 Divider()

@@ -8,9 +8,10 @@
 import SwiftUI
 
 
-struct ScriptJobView: View {
+struct RunScriptView: View {
     @State var isEditorPresented = false
     @State var job: RunScript
+    let id: String
         
     var body: some View {
         ZStack {
@@ -20,16 +21,17 @@ struct ScriptJobView: View {
                 Text(self.job.interpreter.rawValue)
                     .foregroundColor(.black)
                 
-                Image("script")
+//                Image("script")
+                Image(systemName: "applescript")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 60.0, height: 50.0)
+                    .frame(width: 32.0, height: 32.0)
                     .onTapGesture(count: 1, perform: {
                         print("ScriptJobView image onTapGesture...")
                         self.isEditorPresented = true
                     })
                     .sheet(isPresented: $isEditorPresented, content: {
-                        ScriptEditorView(job: $job, submit: {
+                        RunScriptEditorView(id: self.id, job: $job, submit: {
                             self.isEditorPresented = false
                             //TODO 节点持久化
                             
@@ -46,10 +48,10 @@ struct ScriptJobView: View {
     }
 }
 
-struct ScriptJobView_Previews: PreviewProvider {
-    static var job: RunScript = RunScript(id: "test")
+struct RunScriptView_Previews: PreviewProvider {
+    static var job: RunScript = RunScript()
     
     static var previews: some View {
-        ScriptJobView(job: job)
+        RunScriptView(job: job, id: "")
     }
 }

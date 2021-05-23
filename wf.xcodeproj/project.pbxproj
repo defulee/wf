@@ -13,17 +13,19 @@
 		9D0C30E7263060FA00DCE2D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D0C30E6263060FA00DCE2D0 /* Preview Assets.xcassets */; };
 		9D24C0D4264E642800E87076 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D24C0D3264E642800E87076 /* FlowView.swift */; };
 		9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */; };
+		9D7F96882658912E0005F76D /* PostNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96872658912E0005F76D /* PostNotificationView.swift */; };
+		9D7F968F265933FE0005F76D /* CopyToClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */; };
 		9D829E1F2636F93800769EF2 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E1E2636F93800769EF2 /* Bash.swift */; };
 		9D829E232638668600769EF2 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E222638668600769EF2 /* Script.swift */; };
 		9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E2E263B0D1700769EF2 /* FileHelper.swift */; };
-		9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E3D264157A200769EF2 /* ScriptJobView.swift */; };
-		9D829E4326416AB300769EF2 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4226416AB300769EF2 /* ScriptEditorView.swift */; };
+		9D829E3E264157A200769EF2 /* RunScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E3D264157A200769EF2 /* RunScriptView.swift */; };
+		9D829E4326416AB300769EF2 /* RunScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */; };
 		9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */; };
 		9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4A2642A65C00769EF2 /* ScriptInput.swift */; };
 		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
 		9D829E582642E64C00769EF2 /* RunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* RunScript.swift */; };
 		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
-		9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */; };
+		9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowJob.swift */; };
 		9D829E6B26500A0700769EF2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E6A26500A0700769EF2 /* Job.swift */; };
 		9D829E752651019C00769EF2 /* PListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D829E742651019C00769EF2 /* PListKit */; };
 		9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7726510B8D00769EF2 /* FlowConnection.swift */; };
@@ -43,17 +45,19 @@
 		9D0C30E9263060FA00DCE2D0 /* Wf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wf.entitlements; sourceTree = "<group>"; };
 		9D24C0D3264E642800E87076 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
 		9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextEditorView.swift; sourceTree = "<group>"; };
+		9D7F96872658912E0005F76D /* PostNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotificationView.swift; sourceTree = "<group>"; };
+		9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardView.swift; sourceTree = "<group>"; };
 		9D829E1E2636F93800769EF2 /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
 		9D829E222638668600769EF2 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		9D829E2E263B0D1700769EF2 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
-		9D829E3D264157A200769EF2 /* ScriptJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptJobView.swift; sourceTree = "<group>"; };
-		9D829E4226416AB300769EF2 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
+		9D829E3D264157A200769EF2 /* RunScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScriptView.swift; sourceTree = "<group>"; };
+		9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScriptEditorView.swift; sourceTree = "<group>"; };
 		9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInterpreter.swift; sourceTree = "<group>"; };
 		9D829E4A2642A65C00769EF2 /* ScriptInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInput.swift; sourceTree = "<group>"; };
 		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9D829E572642E64C00769EF2 /* RunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScript.swift; sourceTree = "<group>"; };
 		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScriptJob.swift; sourceTree = "<group>"; };
+		9D829E67264ED1A100769EF2 /* FlowJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowJob.swift; sourceTree = "<group>"; };
 		9D829E6A26500A0700769EF2 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		9D829E7726510B8D00769EF2 /* FlowConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConnection.swift; sourceTree = "<group>"; };
 		9D829E7A2651131400769EF2 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
@@ -77,7 +81,7 @@
 		9D0C30D3263060F400DCE2D0 = {
 			isa = PBXGroup;
 			children = (
-				9D0C30DE263060F500DCE2D0 /* WF */,
+				9D0C30DE263060F500DCE2D0 /* Wf */,
 				9D0C30DD263060F500DCE2D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9D0C30DE263060F500DCE2D0 /* WF */ = {
+		9D0C30DE263060F500DCE2D0 /* Wf */ = {
 			isa = PBXGroup;
 			children = (
 				9D829E7E26515E2700769EF2 /* Extension */,
@@ -107,7 +111,7 @@
 				9D0C30E9263060FA00DCE2D0 /* Wf.entitlements */,
 				9D0C30E5263060FA00DCE2D0 /* Preview Content */,
 			);
-			path = WF;
+			path = Wf;
 			sourceTree = "<group>";
 		};
 		9D0C30E5263060FA00DCE2D0 /* Preview Content */ = {
@@ -165,8 +169,10 @@
 		9D829E3C2641573400769EF2 /* Job */ = {
 			isa = PBXGroup;
 			children = (
-				9D829E3D264157A200769EF2 /* ScriptJobView.swift */,
-				9D829E4226416AB300769EF2 /* ScriptEditorView.swift */,
+				9D829E3D264157A200769EF2 /* RunScriptView.swift */,
+				9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */,
+				9D7F96872658912E0005F76D /* PostNotificationView.swift */,
+				9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -220,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				9D829E64264ED14E00769EF2 /* Flow.swift */,
-				9D829E67264ED1A100769EF2 /* FlowScriptJob.swift */,
+				9D829E67264ED1A100769EF2 /* FlowJob.swift */,
 				9D829E7726510B8D00769EF2 /* FlowConnection.swift */,
 			);
 			path = Flow;
@@ -317,22 +323,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D829E4326416AB300769EF2 /* ScriptEditorView.swift in Sources */,
+				9D829E4326416AB300769EF2 /* RunScriptEditorView.swift in Sources */,
 				9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */,
 				9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */,
+				9D7F96882658912E0005F76D /* PostNotificationView.swift in Sources */,
 				9D829E1F2636F93800769EF2 /* Bash.swift in Sources */,
 				9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */,
 				9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */,
 				9D0C30E2263060F500DCE2D0 /* ContentView.swift in Sources */,
+				9D7F968F265933FE0005F76D /* CopyToClipboardView.swift in Sources */,
 				9D829E7B2651131400769EF2 /* JobType.swift in Sources */,
 				9D829E65264ED14E00769EF2 /* Flow.swift in Sources */,
 				9D829E552642E60E00769EF2 /* ModelData.swift in Sources */,
 				9D829E832652A1A800769EF2 /* PostNotification.swift in Sources */,
 				9D829E232638668600769EF2 /* Script.swift in Sources */,
 				9D829E8026515E4600769EF2 /* extension.swift in Sources */,
-				9D829E3E264157A200769EF2 /* ScriptJobView.swift in Sources */,
+				9D829E3E264157A200769EF2 /* RunScriptView.swift in Sources */,
 				9D829E862652A1D400769EF2 /* CopyToClipboard.swift in Sources */,
-				9D829E68264ED1A100769EF2 /* FlowScriptJob.swift in Sources */,
+				9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */,
 				9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */,
 				9D829E582642E64C00769EF2 /* RunScript.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,

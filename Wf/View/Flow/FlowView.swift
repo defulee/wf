@@ -31,9 +31,19 @@ struct FlowView: View {
         let flow = modelData.flows[0]
             
         GeometryReader { gr in
-            ForEach(flow.scriptJobs) { flowJob in
-                ScriptJobView(job: flowJob.job)
-                    .position(x: gr.frame(in: .global).minX + flowJob.xpos, y: gr.frame(in: .global).minY + flowJob.ypos)
+            ForEach(flow.jobs) { flowJob in
+                switch flowJob.job.type {
+                case .RunScript:
+                    RunScriptView(job: flowJob.job as! RunScript, id: flowJob.id)
+                        .position(x: gr.frame(in: .global).minX + flowJob.xpos, y: gr.frame(in: .global).minY + flowJob.ypos)
+                case .PostNotification:
+                    PostNotificationView(job: flowJob.job as! PostNotification)
+                        .position(x: gr.frame(in: .global).minX + flowJob.xpos, y: gr.frame(in: .global).minY + flowJob.ypos)
+                case .CopyToClipboard:
+                    CopyToClipboardView(job: flowJob.job as! CopyToClipboard)
+                        .position(x: gr.frame(in: .global).minX + flowJob.xpos, y: gr.frame(in: .global).minY + flowJob.ypos)
+                }
+                
             }
             
             ForEach(flow.connections) { connection in

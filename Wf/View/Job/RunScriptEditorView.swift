@@ -8,7 +8,8 @@
 import SwiftUI
 import PListKit
 
-struct ScriptEditorView: View {
+struct RunScriptEditorView: View {
+    let id: String
     @Binding var job: RunScript
 
     var submit: () -> Void
@@ -73,7 +74,7 @@ struct ScriptEditorView: View {
     func persistentJob() -> Void {
         let fileManager = FileManager.default
         let appSupportDir = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
-        let jobURL = URL(fileURLWithPath: "wf.job.\(self.job.id)", relativeTo: appSupportDir).appendingPathExtension("plist")
+        let jobURL = URL(fileURLWithPath: "wf.job.\(self.id)", relativeTo: appSupportDir).appendingPathExtension("plist")
       
         let pl = PList()
         pl.load(fromURL: jobURL)
@@ -82,7 +83,7 @@ struct ScriptEditorView: View {
         pl.root.string(key: "interpreter").value = self.job.interpreter.rawValue
         pl.root.string(key: "input").value = self.job.input.rawValue
         pl.root.string(key: "script").value = self.job.script
-        pl.root.string(key: "jobId").value = self.job.id
+        pl.root.string(key: "jobId").value = self.id
         try? pl.save(toURL: jobURL)
         
         print("persistentJob file:\(jobURL.absoluteURL) saved")
@@ -93,11 +94,10 @@ struct ScriptEditorView: View {
 }
 
 struct ScriptEditorView_Previews: PreviewProvider {
-    
-    @State static var job: RunScript = RunScript(id: "test", interpreter: .bash, input: .query, script: "ls -al")
+    @State static var job: RunScript = RunScript(interpreter: .bash, input: .query, script: "ls -al")
     
     static var previews: some View {
-        ScriptEditorView(job: $job, submit: {
+        RunScriptEditorView(id: "", job: $job, submit: {
             print("submit func is run...")
         })
     }

@@ -8,17 +8,15 @@
 import Foundation
 
 class Job: Encodable {
-    var id: String
     var type: JobType
     var desc: String
     
-    init(id: String, type: JobType, desc: String = "") {
-        self.id = id
+    init(type: JobType, desc: String = "") {
         self.type = type
         self.desc = desc
     }
     
-    func exec() -> String {
+    func exec(flowId: String, jobId: String, arg: String) -> String {
         print("job run...")
         return "job return"
     }

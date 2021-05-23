@@ -9,12 +9,14 @@ import Foundation
 
 
 
-class FlowScriptJob: Identifiable{
-    var job: ScriptJob
+class FlowJob: Identifiable{
+    var id: String
+    var job: Job
     var xpos: CGFloat
     var ypos: CGFloat
     
-    init(job: ScriptJob, xpos: CGFloat, ypos: CGFloat) {
+    init(id: String, job: Job, xpos: CGFloat, ypos: CGFloat) {
+        self.id = id
         self.job = job
         self.xpos = xpos
         self.ypos = ypos

@@ -19,11 +19,11 @@ class FileHelper {
         
     }
     
-    func write(fileName: String, data: String) -> Bool {
+    func write(fileName: String, data: String) -> String {
         // Create data to be saved
         guard let dataStr = data.data(using: .utf8) else {
             print("[File#write] Unable to convert string to data")
-            return false
+            return ""
         }
         // Save the data
         do {
@@ -33,13 +33,13 @@ class FileHelper {
             // /Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
             // /Users/defu/Library/Containers/com.defu.Wf/Data/Library/Application%20Support/test.txt
             print("File saved: \(fileURL.absoluteURL)")
+            return fileURL.absoluteURL.absoluteString
         } catch {
             // Catch any errors
             print(error.localizedDescription)
-            return false
+            return ""
         }
         
-        return true
     }
     
     
