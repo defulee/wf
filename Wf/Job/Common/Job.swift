@@ -7,13 +7,20 @@
 
 import Foundation
 
-class Job: Encodable {
+class Job: Encodable, Identifiable {
+    var id: String
     var type: JobType
     var desc: String
     
-    init(type: JobType, desc: String = "") {
+    var xpos: CGFloat
+    var ypos: CGFloat
+    
+    init(id: String, type: JobType, desc: String = "", xpos: CGFloat = 0, ypos: CGFloat = 0) {
+        self.id = id
         self.type = type
         self.desc = desc
+        self.xpos = xpos
+        self.ypos = ypos
     }
     
     func exec(flowId: String, jobId: String, arg: String) -> String {

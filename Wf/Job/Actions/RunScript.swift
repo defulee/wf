@@ -13,12 +13,12 @@ class RunScript: Job {
     var input: ScriptInput
     var script: String
     
-    init(interpreter: ScriptInterpreter = .bash, input: ScriptInput = .query, script: String = "") {
+    init(id: String, interpreter: ScriptInterpreter = .bash, input: ScriptInput = .query, script: String = "", xpos: CGFloat = 0, ypos: CGFloat = 0) {
         self.interpreter = interpreter
         self.input = input
         self.script = script
         
-        super.init(type: .RunScript, desc: "Run Script")
+        super.init(id: id, type: .RunScript, desc: "Run Script", xpos: xpos, ypos: ypos)
     }
     
     override func exec(flowId: String, jobId: String, arg: String) -> String {
@@ -27,11 +27,17 @@ class RunScript: Job {
         let suffix = self.suffix()
         let path = NSTemporaryDirectory() + "\(jobId).\(suffix)"
         
+        var toExecScript = self.script
         if input == .query {
-            let realScript = script.replacingOccurrences(of: "{query}", with: arg)
-            try! realScript.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+            toExecScript = script.replacingOccurrences(of: "{query}", with: arg)
         }
-        return exec(scriptFilePath: path, arg: arg)
+        try! toExecScript.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+        // 执行脚本
+        let rst = exec(scriptFilePath: path, arg: arg)
+        // 执行完之后清除脚本
+        try! FileManager.default.removeItem(atPath: path)
+        
+        return rst
     }
     
     func suffix() -> String {

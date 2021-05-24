@@ -12,10 +12,10 @@ class CopyToClipboard: Job {
     var text: String
     
     
-    init(text: String = "{query}") {
+    init(id: String, text: String = "{query}", xpos: CGFloat = 0, ypos: CGFloat = 0) {
         self.text = text
         
-        super.init(type: .CopyToClipboard, desc: "Copy to Clipboard")
+        super.init(id: id, type: .CopyToClipboard, desc: "Copy to Clipboard", xpos: xpos, ypos: ypos)
     }
     
     override func exec(flowId: String, jobId: String, arg: String) -> String {

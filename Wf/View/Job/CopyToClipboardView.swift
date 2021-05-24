@@ -46,7 +46,7 @@ struct CopyToClipboardView: View {
 }
 
 struct CopyToClipboardView_Previews: PreviewProvider {
-    static var job: CopyToClipboard = CopyToClipboard()
+    static var job: CopyToClipboard = CopyToClipboard(id: "")
 
     
     static var previews: some View {

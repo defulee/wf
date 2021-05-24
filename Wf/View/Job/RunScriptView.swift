@@ -11,7 +11,6 @@ import SwiftUI
 struct RunScriptView: View {
     @State var isEditorPresented = false
     @State var job: RunScript
-    let id: String
         
     var body: some View {
         ZStack {
@@ -31,7 +30,7 @@ struct RunScriptView: View {
                         self.isEditorPresented = true
                     })
                     .sheet(isPresented: $isEditorPresented, content: {
-                        RunScriptEditorView(id: self.id, job: $job, submit: {
+                        RunScriptEditorView(job: $job, submit: {
                             self.isEditorPresented = false
                             //TODO 节点持久化
                             
@@ -49,9 +48,9 @@ struct RunScriptView: View {
 }
 
 struct RunScriptView_Previews: PreviewProvider {
-    static var job: RunScript = RunScript()
+    static var job: RunScript = RunScript(id: "")
     
     static var previews: some View {
-        RunScriptView(job: job, id: "")
+        RunScriptView(job: job)
     }
 }

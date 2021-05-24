@@ -46,7 +46,7 @@ struct PostNotificationView: View {
 }
 
 struct PostNotificationView_Previews: PreviewProvider {
-    static var job: PostNotification = PostNotification(title: "翻译结果")
+    static var job: PostNotification = PostNotification(id: "", title: "翻译结果")
 
     
     static var previews: some View {

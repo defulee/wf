@@ -25,7 +25,6 @@
 		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
 		9D829E582642E64C00769EF2 /* RunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* RunScript.swift */; };
 		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
-		9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E67264ED1A100769EF2 /* FlowJob.swift */; };
 		9D829E6B26500A0700769EF2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E6A26500A0700769EF2 /* Job.swift */; };
 		9D829E752651019C00769EF2 /* PListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D829E742651019C00769EF2 /* PListKit */; };
 		9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E7726510B8D00769EF2 /* FlowConnection.swift */; };
@@ -57,7 +56,6 @@
 		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9D829E572642E64C00769EF2 /* RunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScript.swift; sourceTree = "<group>"; };
 		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		9D829E67264ED1A100769EF2 /* FlowJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowJob.swift; sourceTree = "<group>"; };
 		9D829E6A26500A0700769EF2 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		9D829E7726510B8D00769EF2 /* FlowConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConnection.swift; sourceTree = "<group>"; };
 		9D829E7A2651131400769EF2 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				9D829E64264ED14E00769EF2 /* Flow.swift */,
-				9D829E67264ED1A100769EF2 /* FlowJob.swift */,
 				9D829E7726510B8D00769EF2 /* FlowConnection.swift */,
 			);
 			path = Flow;
@@ -340,7 +337,6 @@
 				9D829E8026515E4600769EF2 /* extension.swift in Sources */,
 				9D829E3E264157A200769EF2 /* RunScriptView.swift in Sources */,
 				9D829E862652A1D400769EF2 /* CopyToClipboard.swift in Sources */,
-				9D829E68264ED1A100769EF2 /* FlowJob.swift in Sources */,
 				9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */,
 				9D829E582642E64C00769EF2 /* RunScript.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
