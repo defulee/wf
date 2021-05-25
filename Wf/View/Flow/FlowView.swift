@@ -36,12 +36,16 @@ struct FlowView: View {
                 case .RunScript:
                     RunScriptView(job: job as! RunScript)
                         .position(x: gr.frame(in: .global).minX + job.xpos, y: gr.frame(in: .global).minY + job.ypos)
+                case .ListFilter:
+                    ListFilterView(job: job as! ListFilter)
+                        .position(x: gr.frame(in: .global).minX + job.xpos, y: gr.frame(in: .global).minY + job.ypos)
                 case .PostNotification:
                     PostNotificationView(job: job as! PostNotification)
                         .position(x: gr.frame(in: .global).minX + job.xpos, y: gr.frame(in: .global).minY + job.ypos)
                 case .CopyToClipboard:
                     CopyToClipboardView(job: job as! CopyToClipboard)
                         .position(x: gr.frame(in: .global).minX + job.xpos, y: gr.frame(in: .global).minY + job.ypos)
+                    
                 }
                 
             }

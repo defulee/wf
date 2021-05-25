@@ -20,6 +20,11 @@ class CopyToClipboard: Job {
     
     override func exec(flowId: String, jobId: String, arg: String) -> String {
         print("CopyToClipboard run...")
+        
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
+        pasteboard.setString(arg, forType: NSPasteboard.PasteboardType.string)
+        
         return "job return"
     }
 }

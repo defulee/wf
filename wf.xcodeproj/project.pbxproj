@@ -15,6 +15,8 @@
 		9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */; };
 		9D7F96882658912E0005F76D /* PostNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96872658912E0005F76D /* PostNotificationView.swift */; };
 		9D7F968F265933FE0005F76D /* CopyToClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */; };
+		9D7F9693265D4C020005F76D /* ListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F9692265D4C020005F76D /* ListFilter.swift */; };
+		9D7F9696265D4CB10005F76D /* ListFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F9695265D4CB10005F76D /* ListFilterView.swift */; };
 		9D829E1F2636F93800769EF2 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E1E2636F93800769EF2 /* Bash.swift */; };
 		9D829E232638668600769EF2 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E222638668600769EF2 /* Script.swift */; };
 		9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E2E263B0D1700769EF2 /* FileHelper.swift */; };
@@ -46,6 +48,8 @@
 		9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextEditorView.swift; sourceTree = "<group>"; };
 		9D7F96872658912E0005F76D /* PostNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotificationView.swift; sourceTree = "<group>"; };
 		9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardView.swift; sourceTree = "<group>"; };
+		9D7F9692265D4C020005F76D /* ListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilter.swift; sourceTree = "<group>"; };
+		9D7F9695265D4CB10005F76D /* ListFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterView.swift; sourceTree = "<group>"; };
 		9D829E1E2636F93800769EF2 /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
 		9D829E222638668600769EF2 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		9D829E2E263B0D1700769EF2 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */,
 				9D7F96872658912E0005F76D /* PostNotificationView.swift */,
 				9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */,
+				9D7F9695265D4CB10005F76D /* ListFilterView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				9D829E572642E64C00769EF2 /* RunScript.swift */,
+				9D7F9692265D4C020005F76D /* ListFilter.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -340,6 +346,8 @@
 				9D829E7826510B8D00769EF2 /* FlowConnection.swift in Sources */,
 				9D829E582642E64C00769EF2 /* RunScript.swift in Sources */,
 				9D0C30E0263060F500DCE2D0 /* WfApp.swift in Sources */,
+				9D7F9696265D4CB10005F76D /* ListFilterView.swift in Sources */,
+				9D7F9693265D4C020005F76D /* ListFilter.swift in Sources */,
 				9D24C0D4264E642800E87076 /* FlowView.swift in Sources */,
 				9D829E6B26500A0700769EF2 /* Job.swift in Sources */,
 			);

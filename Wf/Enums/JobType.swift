@@ -9,6 +9,7 @@ import Foundation
 
 enum JobType: String, CaseIterable, Identifiable, Codable {
     case RunScript = "action.script"
+    case ListFilter = "action.filter"
     case PostNotification = "output.notification"
     case CopyToClipboard = "output.clipboard"
 

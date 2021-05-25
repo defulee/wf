@@ -28,7 +28,7 @@ class PostNotification: Job {
         
         // 1. 创建一个“通知实体” UNMutableNotificationContent
         let content = UNMutableNotificationContent()
-        content.title = "wf Notification"
+        content.title = self.title
         content.body = arg
         content.sound = .default
         

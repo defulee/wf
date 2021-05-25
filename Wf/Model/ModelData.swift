@@ -16,11 +16,11 @@ final class ModelData: ObservableObject {
 
 
 func loadFlows() -> [Flow]{
-    let job1 = RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296", xpos: 160, ypos: 60)
+    let job1 = RunScript(id: "C894F8ED-2CC8-46DD-A1FC-683628CCF296", xpos: 160, ypos: 180)
     let job2 = RunScript(id:  "200D6FF7-2B7F-42FF-8B27-331B37ABC36C", xpos: 560, ypos: 60)
     let job3 = PostNotification(id: "6D2F020C-4B37-4402-AE34-3C7CA86B08DB", title: "翻译结果", xpos: 760, ypos: 60)
     
-    let job4 = RunScript(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A", xpos: 360, ypos: 180)
+    let job4 = ListFilter(id:  "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A", xpos: 360, ypos: 180)
     let job5 = RunScript(id: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65", xpos: 560, ypos: 180)
     let job6 = CopyToClipboard(id: "ED513634-4FBC-4258-AF29-9F6214C05D28", xpos: 760, ypos: 180)
     
@@ -33,9 +33,11 @@ func loadFlows() -> [Flow]{
                         FlowConnection(srcJobId: "200D6FF7-2B7F-42FF-8B27-331B37ABC36C", destJobIds: ["6D2F020C-4B37-4402-AE34-3C7CA86B08DB"]),
                         FlowConnection(srcJobId: "506F8893-E009-4F0F-92F3-4656785B9875", destJobIds: ["EF04F569-D9CF-4145-ACE0-4BD0B3DEF672"]),
                         FlowConnection(srcJobId: "50ACFBA3-8F38-4842-B93A-3B021E6F7E2A", destJobIds: [
-                                        "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65","506F8893-E009-4F0F-92F3-4656785B9875"]),
+                                        "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65",
+                                        "506F8893-E009-4F0F-92F3-4656785B9875",
+                                        "200D6FF7-2B7F-42FF-8B27-331B37ABC36C"]),
                         FlowConnection(srcJobId: "7C8EEBA5-D292-4BFE-8B3A-C8F5BC22BE65", destJobIds: ["ED513634-4FBC-4258-AF29-9F6214C05D28"]),
-                        FlowConnection(srcJobId: "C894F8ED-2CC8-46DD-A1FC-683628CCF296", destJobIds: ["200D6FF7-2B7F-42FF-8B27-331B37ABC36C"]),
+                        FlowConnection(srcJobId: "C894F8ED-2CC8-46DD-A1FC-683628CCF296", destJobIds: ["50ACFBA3-8F38-4842-B93A-3B021E6F7E2A"]),
                     ])
     
     
