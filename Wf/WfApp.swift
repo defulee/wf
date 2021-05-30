@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct WfApp: App {
-    @StateObject private var modelData = ModelData()
+    @StateObject private var env = Env()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelData)
+                .environmentObject(env)
         }
         //设置隐藏标题栏风格
         .windowStyle(HiddenTitleBarWindowStyle())

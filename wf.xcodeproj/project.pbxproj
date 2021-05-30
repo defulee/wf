@@ -17,6 +17,11 @@
 		9D7F968F265933FE0005F76D /* CopyToClipboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */; };
 		9D7F9693265D4C020005F76D /* ListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F9692265D4C020005F76D /* ListFilter.swift */; };
 		9D7F9696265D4CB10005F76D /* ListFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F9695265D4CB10005F76D /* ListFilterView.swift */; };
+		9D7F969A2661F23C0005F76D /* ListSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96992661F23C0005F76D /* ListSelectView.swift */; };
+		9D7F969D2661F52A0005F76D /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F969C2661F52A0005F76D /* FeedbackView.swift */; };
+		9D7F96A226623A8D0005F76D /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96A126623A8D0005F76D /* ContentType.swift */; };
+		9D7F96A526625EE50005F76D /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96A426625EE50005F76D /* ListItemView.swift */; };
+		9D7F96A8266348EA0005F76D /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F96A7266348EA0005F76D /* ListItem.swift */; };
 		9D829E1F2636F93800769EF2 /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E1E2636F93800769EF2 /* Bash.swift */; };
 		9D829E232638668600769EF2 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E222638668600769EF2 /* Script.swift */; };
 		9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E2E263B0D1700769EF2 /* FileHelper.swift */; };
@@ -24,7 +29,7 @@
 		9D829E4326416AB300769EF2 /* RunScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */; };
 		9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */; };
 		9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E4A2642A65C00769EF2 /* ScriptInput.swift */; };
-		9D829E552642E60E00769EF2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* ModelData.swift */; };
+		9D829E552642E60E00769EF2 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E542642E60E00769EF2 /* Env.swift */; };
 		9D829E582642E64C00769EF2 /* RunScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E572642E64C00769EF2 /* RunScript.swift */; };
 		9D829E65264ED14E00769EF2 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E64264ED14E00769EF2 /* Flow.swift */; };
 		9D829E6B26500A0700769EF2 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D829E6A26500A0700769EF2 /* Job.swift */; };
@@ -50,6 +55,11 @@
 		9D7F968E265933FE0005F76D /* CopyToClipboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardView.swift; sourceTree = "<group>"; };
 		9D7F9692265D4C020005F76D /* ListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilter.swift; sourceTree = "<group>"; };
 		9D7F9695265D4CB10005F76D /* ListFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFilterView.swift; sourceTree = "<group>"; };
+		9D7F96992661F23C0005F76D /* ListSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectView.swift; sourceTree = "<group>"; };
+		9D7F969C2661F52A0005F76D /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		9D7F96A126623A8D0005F76D /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		9D7F96A426625EE50005F76D /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		9D7F96A7266348EA0005F76D /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		9D829E1E2636F93800769EF2 /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
 		9D829E222638668600769EF2 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		9D829E2E263B0D1700769EF2 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
@@ -57,7 +67,7 @@
 		9D829E4226416AB300769EF2 /* RunScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScriptEditorView.swift; sourceTree = "<group>"; };
 		9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInterpreter.swift; sourceTree = "<group>"; };
 		9D829E4A2642A65C00769EF2 /* ScriptInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptInput.swift; sourceTree = "<group>"; };
-		9D829E542642E60E00769EF2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		9D829E542642E60E00769EF2 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		9D829E572642E64C00769EF2 /* RunScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScript.swift; sourceTree = "<group>"; };
 		9D829E64264ED14E00769EF2 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		9D829E6A26500A0700769EF2 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -135,11 +145,22 @@
 		9D77C05A26344DDF00FC31BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D7F96982661F1890005F76D /* Feedback */,
 				9D24C0D2264E640700E87076 /* Flow */,
 				9D829E3C2641573400769EF2 /* Job */,
 				9D77C05B26344E7A00FC31BC /* MultiTextEditorView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9D7F96982661F1890005F76D /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				9D7F96992661F23C0005F76D /* ListSelectView.swift */,
+				9D7F969C2661F52A0005F76D /* FeedbackView.swift */,
+				9D7F96A426625EE50005F76D /* ListItemView.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		9D829E182636F70A00769EF2 /* Util */ = {
@@ -186,6 +207,7 @@
 				9D829E4626428B5100769EF2 /* ScriptInterpreter.swift */,
 				9D829E4A2642A65C00769EF2 /* ScriptInput.swift */,
 				9D829E7A2651131400769EF2 /* JobType.swift */,
+				9D7F96A126623A8D0005F76D /* ContentType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -193,7 +215,8 @@
 		9D829E522642E59700769EF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9D829E542642E60E00769EF2 /* ModelData.swift */,
+				9D829E542642E60E00769EF2 /* Env.swift */,
+				9D7F96A7266348EA0005F76D /* ListItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,16 +351,21 @@
 			files = (
 				9D829E4326416AB300769EF2 /* RunScriptEditorView.swift in Sources */,
 				9D829E4B2642A65C00769EF2 /* ScriptInput.swift in Sources */,
+				9D7F96A526625EE50005F76D /* ListItemView.swift in Sources */,
 				9D829E4726428B5100769EF2 /* ScriptInterpreter.swift in Sources */,
 				9D7F96882658912E0005F76D /* PostNotificationView.swift in Sources */,
 				9D829E1F2636F93800769EF2 /* Bash.swift in Sources */,
+				9D7F969A2661F23C0005F76D /* ListSelectView.swift in Sources */,
 				9D829E2F263B0D1700769EF2 /* FileHelper.swift in Sources */,
 				9D77C05C26344E7A00FC31BC /* MultiTextEditorView.swift in Sources */,
+				9D7F96A226623A8D0005F76D /* ContentType.swift in Sources */,
+				9D7F96A8266348EA0005F76D /* ListItem.swift in Sources */,
 				9D0C30E2263060F500DCE2D0 /* ContentView.swift in Sources */,
 				9D7F968F265933FE0005F76D /* CopyToClipboardView.swift in Sources */,
 				9D829E7B2651131400769EF2 /* JobType.swift in Sources */,
+				9D7F969D2661F52A0005F76D /* FeedbackView.swift in Sources */,
 				9D829E65264ED14E00769EF2 /* Flow.swift in Sources */,
-				9D829E552642E60E00769EF2 /* ModelData.swift in Sources */,
+				9D829E552642E60E00769EF2 /* Env.swift in Sources */,
 				9D829E832652A1A800769EF2 /* PostNotification.swift in Sources */,
 				9D829E232638668600769EF2 /* Script.swift in Sources */,
 				9D829E8026515E4600769EF2 /* extension.swift in Sources */,

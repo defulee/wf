@@ -25,10 +25,10 @@ struct Bezier: Shape {
 }
     
 struct FlowView: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var env: Env
     
     var body: some View {
-        let flow = modelData.flows[0]
+        let flow = env.flows[0]
             
         GeometryReader { gr in
             ForEach(flow.jobs) { job in
@@ -66,7 +66,7 @@ struct FlowView: View {
 }
 
 struct FlowView_Previews: PreviewProvider {
-    @StateObject private var modelData = ModelData()
+    @StateObject private var env = Env()
     
     static var previews: some View {
         FlowView()

@@ -14,6 +14,7 @@ class Flow : Identifiable {
     var jobs: [Job]
     var connections: [FlowConnection]
     
+    
     init(jobs: [Job], connections: [FlowConnection]) {
         self.id = "flow"
         self.jobs = jobs

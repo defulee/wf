@@ -9,9 +9,10 @@ import Foundation
 
 
 
-final class ModelData: ObservableObject {
+final class Env: ObservableObject {
     @Published var flows: [Flow] = loadFlows()
-    
+    @Published var currentJobType: JobType = .ListFilter
+    @Published var feedback: String = "[{\"content\":\"content1\", \"desc\":\"desc1\", \"arg\": \"arg1\", \"id\": 1, \"imageName\":\"\"},{\"content\":\"content2\", \"desc\":\"desc2\", \"arg\": \"arg2\", \"id\": 2, \"imageName\":\"\"}]"
 }
 
 

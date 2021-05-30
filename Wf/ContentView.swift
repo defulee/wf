@@ -10,26 +10,33 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @EnvironmentObject var env: Env
     @State var input: String = ""
-    @State var text: String = ""
+    
+    @State var feedback: String = ""
+    @State var currentJobType: JobType = .ListFilter
+    
     @State var showAlert: Bool = false
-    @State var filePath: String = ""
+    
+    @State var contentType: ContentType = .Normal
 
     var body: some View {
     
         
         VStack(alignment: .leading) {
-           
-//            MultiTextEditorView()
-//
-//            Divider()
-
-            FlowView()
-                .background(Color(hex: 0x333333))
+            if self.contentType == .Normal {
+                if !self.env.feedback.isEmpty {
+                    FeedbackView()
+                }
+            } else if self.contentType == .FlowList {
+                FlowView()
+                    .background(Color(hex: 0x333333))
+            }
 
         }.padding()
         .background(Color.white)
         .frame(minWidth: 950)
+        .environmentObject(env)
         .toolbar(content: {
             HStack(alignment: .center) {
                 Image(systemName: "magnifyingglass")
@@ -50,19 +57,8 @@ struct ContentView: View {
                 Button(action: {
                     print("submit btn action...")
                     
-                    // file:///Users/defu/Library/Containers/com.defu.Wf/Data/Documents/test.txt
-//                     let file = FileHelper()
-//                    self.filePath = file.write(fileName: "test", data: "submit btn action...")
-//                    print("\(self.filePath)")
-                    
-                    let path:String = NSTemporaryDirectory() + "Documents/hangge.txt"
-//                    let info = "欢迎来到hange.com"
-//                    try! info.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
-                    print(path)
-                    self.filePath = path
+
                     self.showAlert.toggle()
-                    
-                
                 })  {
                     Image(systemName: "hand.point.up")
                         .renderingMode(.original)
@@ -72,7 +68,7 @@ struct ContentView: View {
                         .frame(height: 30.0)
                 }.alert(isPresented: $showAlert) {
                     Alert(title: Text("Important message"),
-                          message: Text(self.filePath),
+                          message: Text(self.feedback),
                           dismissButton: .default(Text("Got it!")))
                 }
                 
@@ -80,6 +76,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     print("job list btn action...")
+                    self.contentType = .FlowList
                 })  {
                     Image(systemName: "rectangle.3.offgrid")
                         .frame(height: 20.0)
